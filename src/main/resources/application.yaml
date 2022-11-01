@@ -1,0 +1,31 @@
+server:
+  port: 80
+
+  #MySQL
+  spring:
+    datasource:
+      driver-class-name: com.mariadb.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/leeu0324?useUnicode=yes&characterEncoding=UTF-8&serverTimezone=UTC
+      username: leeu0324
+      password: cm2468139@
+  
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+        ddl-auto: update
+  #Live Reload
+  devtools:
+    livereload:
+      enabled: true
+
+logging:
+  level:
+    org:
+      hibernate:
+        type:
+          descriptor:
+            sql: trace
+
+
